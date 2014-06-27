@@ -18,7 +18,7 @@ namespace :deploy do
   desc "Restart unicorn and resque"
   task :restart do
     invoke 'deploy:passenger:restart'
-    invoke 'deploy:resque:restart'
+    # invoke 'deploy:resque:restart'
   end
   after :publishing, :restart
 
